@@ -31,32 +31,31 @@ executeScript "WSL.ps1";
 
 # system and cli
 choco install -y curl                --limit-output
-choco install -y git --package-parameters="'/GitAndUnixToolsOnPath /WindowsTerminal'" --limit-output
 
 # browsers
-choco install GoogleChrome -y        --limit-output; <# pin; evergreen #> choco pin add --name GoogleChrome        --limit-output
-choco install GoogleChrome.Canary -y --limit-output; <# pin; evergreen #> choco pin add --name GoogleChrome.Canary --limit-output
-choco install Firefox -y             --limit-output; <# pin; evergreen #> choco pin add --name Firefox             --limit-output
-choco install Opera -y               --limit-output; <# pin; evergreen #> choco pin add --name Opera               --limit-output
+choco install -y GoogleChrome        --limit-output; <# pin; evergreen #> choco pin add --name GoogleChrome        --limit-output
+choco install -y GoogleChrome.Canary --limit-output; <# pin; evergreen #> choco pin add --name GoogleChrome.Canary --limit-output
+choco install -y Firefox             --limit-output; <# pin; evergreen #> choco pin add --name Firefox             --limit-output
+choco install -y Opera               --limit-output; <# pin; evergreen #> choco pin add --name Opera               --limit-output
 
 #fonts
-choco install sourcecodepro       --limit-output
+choco install sourcecodepro                       --limit-output
 
 # dev tools and frameworks
-choco install -y vscode              --limit-output
-choco install -y teamviewer          --limit-output
-choco install -y everything          --limit-output
-choco install -y dropbox             --limit-output
-# choco install -y 7zip.install        --limit-output
-# choco install -y sysinternals        --limit-output
-choco install vim -y                 --limit-output
-choco install ditto -y               --limit-output
+choco install -y vscode                           --limit-output
+choco install -y microsoft-windows-terminal --pre --limit-output
+choco install -y teamviewer                       --limit-output
+choco install -y everything                       --limit-output
+choco install -y dropbox                          --limit-output
+choco install -y vim                              --limit-output
+choco install -y ditto                            --limit-output
+choco install -y slack                            --limit-output
 
 
 write-host "Installing tools inside the WSL distro..."
-Ubuntu1804 run apt install python2.7 python-pip -y 
-Ubuntu1804 run apt install python-numpy python-scipy -y
-Ubuntu1804 run pip install pandas
+# Ubuntu1804 run apt install python2.7 python-pip -y 
+# Ubuntu1804 run apt install python-numpy python-scipy -y
+# Ubuntu1804 run pip install pandas
 
 write-host "Finished installing tools inside the WSL distro"
 

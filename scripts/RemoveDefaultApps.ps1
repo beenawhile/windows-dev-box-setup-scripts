@@ -61,9 +61,14 @@ $applicationList = @(
   "*Netflix*"
   "*Twitter*"
   "*Plex*"
+  "*Spotify*"
+  "*TikTok*"
+  "*Amazon*"
+  "*Roblox*"
   "*.Duolingo-LearnLanguagesforFree"
   "*.EclipseManager"
   "ActiproSoftwareLLC.562882FEEB491" # Code Writer
+  "*AdobePhotoshop*"
   "*.AdobePhotoshopExpress"
 );
 
