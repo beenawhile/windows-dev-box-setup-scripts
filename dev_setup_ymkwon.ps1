@@ -33,10 +33,10 @@ executeScript "WSL.ps1";
 choco install -y curl                --limit-output
 
 # browsers
-choco install -y GoogleChrome        --limit-output; <# pin; evergreen #> choco pin add --name GoogleChrome        --limit-output
-choco install -y GoogleChrome.Canary --limit-output; <# pin; evergreen #> choco pin add --name GoogleChrome.Canary --limit-output
-choco install -y Firefox             --limit-output; <# pin; evergreen #> choco pin add --name Firefox             --limit-output
-choco install -y Opera               --limit-output; <# pin; evergreen #> choco pin add --name Opera               --limit-output
+choco install -y GoogleChrome        --limit-output
+choco install -y GoogleChrome.Canary --limit-output
+choco install -y Firefox             --limit-output
+choco install -y Opera               --limit-output
 
 #fonts
 choco install sourcecodepro                       --limit-output
