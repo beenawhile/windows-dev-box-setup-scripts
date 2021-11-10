@@ -52,6 +52,7 @@ $applicationList = @(
   "Microsoft.Print3D"
   "king.com.CandyCrush*"
   "*Autodesk*"
+  "*edge*"
   "*BubbleWitch*"
   "king.com*"
   "G5*"
@@ -70,6 +71,7 @@ $applicationList = @(
   "ActiproSoftwareLLC.562882FEEB491" # Code Writer
   "*AdobePhotoshop*"
   "*.AdobePhotoshopExpress"
+  "*AdobePhotoshopExpress*"
 );
 
 foreach ($app in $applicationList) {

@@ -28,28 +28,8 @@ executeScript "RemoveDefaultApps.ps1";
 executeScript "CommonDevTools.ps1";
 executeScript "HyperV.ps1";
 executeScript "WSL.ps1";
-
-# system and cli
-choco install -y curl                --limit-output
-
-# browsers
-choco install -y GoogleChrome        --limit-output
-choco install -y GoogleChrome.Canary --limit-output
-choco install -y Firefox             --limit-output
-choco install -y Opera               --limit-output
-
-#fonts
-choco install sourcecodepro                       --limit-output
-
-# dev tools and frameworks
-choco install -y vscode                           --limit-output
-choco install -y microsoft-windows-terminal --pre --limit-output
-choco install -y teamviewer                       --limit-output
-choco install -y everything                       --limit-output
-choco install -y dropbox                          --limit-output
-choco install -y vim                              --limit-output
-choco install -y ditto                            --limit-output
-choco install -y slack                            --limit-output
+executeScript "Docker.ps1";
+executeScript "CustomDevTools.ps1";
 
 
 write-host "Installing tools inside the WSL distro..."
