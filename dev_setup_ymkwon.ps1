@@ -18,7 +18,7 @@ write-host "helper script base URI is $helperUri"
 function executeScript {
   Param ([string]$script)
   write-host "executing $helperUri/$script ..."
-  iex ((new-object net.webclient).DownloadString("$helperUri/$script"))
+  Invoke-Expression ((new-object net.webclient).DownloadString("$helperUri/$script"))
 }
 
 #--- Setting up Windows ---
@@ -30,12 +30,11 @@ executeScript "HyperV.ps1";
 executeScript "WSL.ps1";
 executeScript "Docker.ps1";
 executeScript "CustomDevTools.ps1";
+executeScript "vscode/VscodeExtSettings.ps1";
 
 
 write-host "Installing tools inside the WSL distro..."
-# Ubuntu1804 run apt install python2.7 python-pip -y 
-# Ubuntu1804 run apt install python-numpy python-scipy -y
-# Ubuntu1804 run pip install pandas
+
 
 write-host "Finished installing tools inside the WSL distro"
 

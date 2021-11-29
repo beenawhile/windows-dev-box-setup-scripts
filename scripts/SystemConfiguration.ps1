@@ -39,6 +39,19 @@ Set-ItemProperty -Path HKLM:\SOFTWARE\Policies\Microsoft\Windows\Personalization
 # To Restore:
 # Set-ItemProperty -Path HKLM:\SOFTWARE\Policies\Microsoft\Windows\Personalization -Name NoLockScreen -Type DWord -Value 1
 
+# Disable PIN Code Login
+Set-ItemProperty HKLM:\SOFTWARE\Policies\Microsoft\Windows\System -Name "AllowDomainPINLogon" -Value 0
+Set-ItemProperty HKLM:\SOFTWARE\Microsoft\PolicyManager\default\Settings\AllowSignInOptions -Name "value" -Value 0
+
+Write-Host "Configuring Windows Defender..." -ForegroundColor "Yellow"
+
+# Disable Cloud-Based Protection: Enabled Advanced: 2, Enabled Basic: 1, Disabled: 0
+Set-MpPreference -MAPSReporting 0
+
+# Disable automatic sample submission: Prompt: 0, Auto Send Safe: 1, Never: 2, Auto Send All: 3
+Set-MpPreference -SubmitSamplesConsent 2
+
+
 # Disable Xbox Gamebar
 Set-ItemProperty -Path "HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\GameDVR" -Name AppCaptureEnabled -Type DWord -Value 0
 Set-ItemProperty -Path "HKCU:\System\GameConfigStore" -Name GameDVR_Enabled -Type DWord -Value 0

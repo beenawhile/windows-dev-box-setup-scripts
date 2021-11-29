@@ -1,0 +1,180 @@
+{
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "python.languageServer": "Microsoft",
+  "python.linting.pylintEnabled": true,
+  "python.linting.enabled": true,
+  "python.linting.pylintArgs": [
+    "--load-plugins pylint_django"
+  ],
+  "python.formatting.provider": "black",
+  "python.formatting.blackArgs": [
+    "--line-length",
+    "100"
+  ],
+  "editor.formatOnSave": true,
+  "jupyter.alwaysTrustNotebooks": true,
+  "[python]": {
+    "gitlens.codeLens.symbolScopes": [
+      "!Module"
+    ]
+  },
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter.notebook.ipynb"
+  },
+  "[dart]": {
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.rulers": [
+      80
+    ],
+    "editor.selectionHighlight": false,
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "editor.suggestSelection": "first",
+    "editor.tabCompletion": "onlySnippets",
+    "editor.wordBasedSuggestions": false
+  },
+  "python.pythonPath": "C:\\Users\\hitec\\anaconda3\\envs\\django\\python.exe",
+  "workbench.iconTheme": "material-icon-theme",
+  "dart.debugExternalLibraries": true,
+  "dart.debugSdkLibraries": false,
+  "editor.fontFamily": "D2Coding ligature",
+  "editor.fontLigatures": true,
+  "editor.inlineHints.fontFamily": "Fira Code",
+  "terminal.integrated.fontFamily": "D2Coding",
+  "debug.console.fontFamily": "Fira Code",
+  "editor.codeLensFontFamily": "Fira Code",
+  "toggleexcludedfiles.statusBar.enabled": true,
+  "editor.fontSize": 18,
+  "files.exclude": {
+    "**/*.freezed.dart": false,
+    "**/*.g.dart": false,
+    "**/.gitkeep": false
+  },
+  "files.associations": {
+    "*.moor": "sqlite",
+    "*.html": "html"
+  },
+  "cSpell.enableFiletypes": [
+    "asciidoc",
+    "c",
+    "cpp",
+    "csharp",
+    "css",
+    "dart",
+    "go",
+    "handlebars",
+    "html",
+    "jade",
+    "javascript",
+    "javascriptreact",
+    "json",
+    "latex",
+    "less",
+    "markdown",
+    "php",
+    "plaintext",
+    "pub",
+    "python",
+    "restructuredtext",
+    "rust",
+    "scss",
+    "text",
+    "typescript",
+    "typescriptreact",
+    "yml"
+  ],
+  "dart.flutterCreateAndroidLanguage": "kotlin",
+  "dart.flutterCreateIOSLanguage": "swift",
+  "files.insertFinalNewline": true,
+  "breadcrumbs.enabled": true,
+  "editor.renderControlCharacters": false,
+  "files.autoSave": "off",
+  "todo-tree.general.tags": [
+    "BUG",
+    "HACK",
+    "FIXME",
+    "TODO",
+    "XXX",
+    "[ ]",
+    "[x]"
+  ],
+  "todo-tree.highlights.useColourScheme": true,
+  "todo-tree.highlights.customHighlight": {
+    "TODO": {
+      "foreground": "black",
+      "background": "green",
+      "iconColour": "green",
+      "icon": "check",
+      "gutterIcon": true,
+      // "type": "line"
+    },
+    "FIXME": {
+      "foreground": "black",
+      "background": "red",
+      "iconColour": "red",
+      "icon": "bug",
+      "gutterIcon": true
+    },
+    "HACK": {
+      "foreground": "black",
+      "background": "#FFA500",
+      "iconColour": "orange",
+      "icon": "alert",
+      "gutterIcon": true
+    },
+    "[ ]": {
+      "background": "#ff000080"
+    },
+    "[x]": {
+      "background": "#00ff0080"
+    },
+  },
+  "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
+  "todo-tree.highlights.enabled": true,
+  "editor.detectIndentation": false,
+  "editor.tabSize": 2,
+  "extensions.autoUpdate": true,
+  "workbench.activityBar.visible": true,
+  "cSpell.diagnosticLevel": "Hint",
+  "dart.previewFlutterOutline": true,
+  "material-icon-theme.folders.color": "#2e7d32",
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "dart.previewFlutterGutterIcons": true,
+  "dart.enableMachineLearningCodeCompletion": true,
+  "dart.previewBuildRunnerTasks": true,
+  "dart_data_class_generator.constructor.required": true,
+  "dart_data_class_generator.constructor.default_values": false,
+  "dart_data_class_generator.hashCode.use_jenkins": false,
+  "dart.additionalAnalyzerFileExtensions": [
+    "moor"
+  ],
+  "explorer.compactFolders": false,
+  "terminal.integrated.fontWeight": "500",
+  "editor.fontWeight": "500",
+  "dart.showIgnoreQuickFixes": true,
+  "extensions.ignoreRecommendations": false,
+  "dart.warnWhenEditingFilesOutsideWorkspace": false,
+  "dart.previewFlutterUiGuides": true,
+  "dart.previewFlutterUiGuidesCustomTracking": true,
+  "dart.previewUpdateImportsOnRename": true,
+  "pubspec-assist.sortDependencies": false,
+  "dart.flutterCreateOrganization": "com.deukman",
+  "cSpell.userWords": [
+    "myapp",
+    "unbuffered"
+  ],
+  "dart.debugExternalPackageLibraries": true,
+  "workbench.colorTheme": "Dracula",
+  "explorerExclude.backup": {},
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+  "terminal.integrated.profiles.windows": {
+    "C:\\windows\\System32\\cmd.exe (migrated)": {
+      "path": "C:\\windows\\System32\\cmd.exe",
+      "args": []
+    }
+  },
+  "powershell.powerShellDefaultVersion": "Windows PowerShell (x86)",
+  // "rest-client.previewResponseInUntitledDocument": true,
+}
