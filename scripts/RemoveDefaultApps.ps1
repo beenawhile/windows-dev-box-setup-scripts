@@ -52,7 +52,6 @@ $applicationList = @(
   "king.com.CandyCrush*"
   "*Autodesk*"
   "*.AutodeskSketchBook"
-  "*edge*"
   "*BubbleWitch*"
   "king.com*"
   "G5*"
