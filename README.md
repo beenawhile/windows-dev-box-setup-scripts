@@ -35,7 +35,9 @@ To run a recipe script, click a link in the table below from your target machine
 
 |Click link to run  |Description  |
 |---------|---------|
-|<a href='http://boxstarter.org/package/url?https://raw.githubusercontent.com/devdeukman/windows-env-boxstarter/master/dev_setup_ymkwon.ps1'>Youngmin's Custom Setup</a>| Dev stuffs(still editing...)      |
+|<a href='http://boxstarter.org/package/url?https://raw.githubusercontent.com/enkanto/windows-env-boxstarter/master/dev_test.ps1'>Test Setup(DO NOT USE THIS!!!)</a>| Chocolatey test      |
+|---------|---------|
+|<a href='http://boxstarter.org/package/url?https://raw.githubusercontent.com/enkanto/windows-env-boxstarter/master/dev_setup_ymkwon.ps1'>Youngmin's Custom Setup</a>| Dev stuffs(still editing...)      |
 |<a href='http://boxstarter.org/package/url?https://raw.githubusercontent.com/Microsoft/windows-dev-box-setup-scripts/master/dev_app.ps1'>Full Desktop App</a>     | Windows Desktop App Development (Visual Studio, Windows SDK, C++, UWP, .NET (WPF and Winforms)) |
 |<a href='http://boxstarter.org/package/url?https://raw.githubusercontent.com/Microsoft/windows-dev-box-setup-scripts/master/dev_app_desktop_uwp.ps1'>UWP Desktop App</a>     | Windows Desktop App Development (Visual Studio, Windows SDK, UWP) |
 |<a href='http://boxstarter.org/package/url?https://raw.githubusercontent.com/Microsoft/windows-dev-box-setup-scripts/master/dev_app_desktop_.NET.ps1'>.NET Desktop App</a>     | Windows Desktop App Development (Visual Studio, Windows SDK, .NET (WPF and Winforms)) |
