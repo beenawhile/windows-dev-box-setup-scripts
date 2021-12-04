@@ -1,7 +1,8 @@
-choco install -y wsl2
+# WSL Setup
+choco install -y Microsoft-Windows-Subsystem-Linux --source="'windowsfeatures'"
 
 #--- Ubuntu ---
-# TODO: Move this to choco install once --root is included in that package
+# # TODO: Move this to choco install once --root is included in that package
 Invoke-WebRequest -Uri https://aka.ms/wsl-ubuntu-1804 -OutFile ~/Ubuntu.appx -UseBasicParsing
 Add-AppxPackage -Path ~/Ubuntu.appx
 # run the distro once and have it install locally. The default account is "ubuntu:ubuntu".
@@ -11,8 +12,7 @@ $distro = "ubuntu1804"
 $username = "ubuntu"
 $password = "ubuntu"
 
-& $distro install --root
-if ($LASTEXITCODE -ne 0) { throw "Could not install distro." }
+# & $distro install --root
 # the only non-interactive way to set up a WSL distro is the --root flag
 #    https://github.com/microsoft/WSL/issues/3369
 # but it has the side effect of making all `wsl` calls run as root,
@@ -22,7 +22,7 @@ if ($LASTEXITCODE -ne 0) { throw "Could not install distro." }
 #   https://github.com/microsoft/WSL-DistroLauncher/blob/2ed9a9335fc89a688a5150c95eff4fbdbc830f25/DistroLauncher/DistributionInfo.cpp#L8-L33
 & $distro run useradd -m "$username"
 if ($LASTEXITCODE -ne 0) { throw }
-& $distro run sh -c 'echo "${username}:${password}" \| chpasswd' # wrapped in sh -c to get the pipe to work
+& $distro run sh -c 'echo "${username}:${password}" | chpasswd' # wrapped in sh -c to get the pipe to work
 if ($LASTEXITCODE -ne 0) { throw }
 & $distro run chsh -s /bin/bash "$username"
 if ($LASTEXITCODE -ne 0) { throw }

@@ -8,7 +8,6 @@ choco install -y curl                            --limit-output
 # browsers             
 choco install -y GoogleChrome              --limit-output
 choco install -y Firefox                         --limit-output
-choco install -y microsoft-edge              --limit-output
 
 #fonts
 choco install -y sourcecodepro               --limit-output
