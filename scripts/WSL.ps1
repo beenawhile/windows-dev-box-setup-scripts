@@ -10,8 +10,8 @@ $distro = "ubuntu2004"
 $username = "ubuntu"
 $password = "ubuntu"
 
-& $distro install --root
- if ($LASTEXITCODE -ne 0) { throw "Could not install distro." }
+#& $distro install --root
+#if ($LASTEXITCODE -ne 0) { throw "Could not install distro." }
 # the only non-interactive way to set up a WSL distro is the --root flag
 #    https://github.com/microsoft/WSL/issues/3369
 # but it has the side effect of making all `wsl` calls run as root,
