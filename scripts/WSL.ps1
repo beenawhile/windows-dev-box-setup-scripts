@@ -23,8 +23,8 @@ $password = "ubuntu"
 if ($LASTEXITCODE -ne 0) { throw }
 & $distro run sh -c 'echo "${username}:${password}" | chpasswd' # wrapped in sh -c to get the pipe to work
 if ($LASTEXITCODE -ne 0) { throw }
-& $distro run chsh -s /bin/bash "$username"
-if ($LASTEXITCODE -ne 0) { throw }
+# & $distro run chsh -s /bin/bash "$username"
+# if ($LASTEXITCODE -ne 0) { throw }
 & $distro run usermod -aG adm,cdrom,sudo,dip,plugdev "$username"
 if ($LASTEXITCODE -ne 0) { throw }
 
