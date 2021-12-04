@@ -43,6 +43,7 @@ if ($LASTEXITCODE -ne 0) { throw }
 if ($LASTEXITCODE -ne 0) { throw }
 wsl --terminate "Ubuntu-18.04"  # instead of 'reboot'
 if ($LASTEXITCODE -ne 0) { throw }
-
 & $distro config --default-user "$username"
+if ($LASTEXITCODE -ne 0) { throw }
+& $distro run apt upgrade -y
 if ($LASTEXITCODE -ne 0) { throw }
