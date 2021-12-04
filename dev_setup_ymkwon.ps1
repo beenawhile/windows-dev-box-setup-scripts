@@ -30,7 +30,7 @@ executeScript "HyperV.ps1";
 executeScript "WSL.ps1";
 executeScript "Docker.ps1";
 executeScript "CustomDevTools.ps1";
-executeScript "WSLSetup.ps1";
+# executeScript "WSLSetup.ps1";
 # executeScript "vscode/VscodeExtSettings.ps1";
 
 
