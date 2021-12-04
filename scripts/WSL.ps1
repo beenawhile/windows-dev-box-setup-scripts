@@ -36,13 +36,13 @@ $env:WSLENV += ":DEBIAN_FRONTEND"
 # update software
 & $distro run apt-get update
 if ($LASTEXITCODE -ne 0) { throw }
-& $distro run apt-get autoremove -y
+& $distro run apt upgrade -y
 if ($LASTEXITCODE -ne 0) { throw }
-& $distro run apt-get autoclean
-if ($LASTEXITCODE -ne 0) { throw }
+# & $distro run apt-get autoremove -y
+# if ($LASTEXITCODE -ne 0) { throw }
+# & $distro run apt-get autoclean
+# if ($LASTEXITCODE -ne 0) { throw }
 wsl --terminate "Ubuntu-20.04"  # instead of 'reboot'
 if ($LASTEXITCODE -ne 0) { throw }
 #& $distro config --default-user "$username"
 #if ($LASTEXITCODE -ne 0) { throw }
-& $distro run apt upgrade -y
-if ($LASTEXITCODE -ne 0) { throw }
