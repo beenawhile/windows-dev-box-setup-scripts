@@ -34,7 +34,7 @@ $env:DEBIAN_FRONTEND = "noninteractive"
 $env:WSLENV += ":DEBIAN_FRONTEND"
 
 # update software
-& $distro run apt-get update
+& $distro run apt update
 if ($LASTEXITCODE -ne 0) { throw }
 & $distro run apt upgrade -y
 if ($LASTEXITCODE -ne 0) { throw }
