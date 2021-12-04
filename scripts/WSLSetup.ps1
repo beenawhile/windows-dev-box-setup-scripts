@@ -1,4 +1,4 @@
-$distro = "ubuntu2004"
+$distro = "ubuntu1804"
 
 # download essential tools
 & $distro run apt-get install -y build-essential curl git wget make unzip zip g++ libtool xz-utils libglu1-mesa default-jdk

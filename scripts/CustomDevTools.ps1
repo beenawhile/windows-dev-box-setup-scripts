@@ -17,7 +17,6 @@ choco install -y firacode                        --limit-output
 
 
 # dev tools and frameworks
-choco install -y vscode                      --limit-output
 choco install -y microsoft-windows-terminal  --limit-output
 choco install -y dbeaver                     --limit-output
 

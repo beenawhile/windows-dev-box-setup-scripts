@@ -1,11 +1,13 @@
 choco install -y wsl2
 
 #--- Ubuntu ---
-choco install -y wsl-ubuntu-2004 --params "/InstallRoot:true"
+# TODO: Move this to choco install once --root is included in that package
+Invoke-WebRequest -Uri https://aka.ms/wsl-ubuntu-1804 -OutFile ~/Ubuntu.appx -UseBasicParsing
+Add-AppxPackage -Path ~/Ubuntu.appx
 # run the distro once and have it install locally. The default account is "ubuntu:ubuntu".
 
 RefreshEnv
-$distro = "ubuntu2004"
+$distro = "ubuntu1804"
 $username = "ubuntu"
 $password = "ubuntu"
 
@@ -39,7 +41,7 @@ if ($LASTEXITCODE -ne 0) { throw }
 if ($LASTEXITCODE -ne 0) { throw }
 & $distro run apt-get autoclean
 if ($LASTEXITCODE -ne 0) { throw }
-wsl --terminate "Ubuntu-20.04"  # instead of 'reboot'
+wsl --terminate "Ubuntu-18.04"  # instead of 'reboot'
 if ($LASTEXITCODE -ne 0) { throw }
 
 & $distro config --default-user "$username"
