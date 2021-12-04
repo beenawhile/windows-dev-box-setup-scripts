@@ -19,14 +19,14 @@ $password = "ubuntu"
 # Workaround this by installing with --root but then replicating,
 # noninteractively, what happens in the WSL DistroLauncher:
 #   https://github.com/microsoft/WSL-DistroLauncher/blob/2ed9a9335fc89a688a5150c95eff4fbdbc830f25/DistroLauncher/DistributionInfo.cpp#L8-L33
-& $distro run useradd -m "$username"
-if ($LASTEXITCODE -ne 0) { throw }
-& $distro run sh -c 'echo "${username}:${password}" | chpasswd' # wrapped in sh -c to get the pipe to work
-if ($LASTEXITCODE -ne 0) { throw }
+#& $distro run useradd -m "$username"
+#if ($LASTEXITCODE -ne 0) { throw }
+#& $distro run sh -c 'echo "${username}:${password}" | chpasswd' # wrapped in sh -c to get the pipe to work
+#if ($LASTEXITCODE -ne 0) { throw }
 # & $distro run chsh -s /bin/bash "$username"
 # if ($LASTEXITCODE -ne 0) { throw }
-& $distro run usermod -aG adm,cdrom,sudo,dip,plugdev "$username"
-if ($LASTEXITCODE -ne 0) { throw }
+#& $distro run usermod -aG adm,cdrom,sudo,dip,plugdev "$username"
+#if ($LASTEXITCODE -ne 0) { throw }
 
 
 # apt install -y isn't enough to be truly noninteractive
