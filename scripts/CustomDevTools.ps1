@@ -30,7 +30,7 @@ choco install -y ditto                       --limit-output
 
 # communication tools
 choco install -y slack                       --limit-output
-choco install -y discord                     --limit-output
-choco install -y gather                      --limit-output
+# choco install -y discord                     --limit-output
+# choco install -y gather                      --limit-output
 choco install -y notion                      --limit-output
 
