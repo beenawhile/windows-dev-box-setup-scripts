@@ -12,7 +12,7 @@ function removeApp {
   Param ([string]$appName)
   Write-Output "Trying to remove $appName"
   Get-AppxPackage $appName -AllUsers | Remove-AppxPackage
-  Get-AppXProvisionedPackage -Online | Where DisplayName -like $appName | Remove-AppxProvisionedPackage -Online
+  Get-AppXProvisionedPackage -Online | Where-Object DisplayName -like $appName | Remove-AppxProvisionedPackage -Online
 }
 
 $applicationList = @(
@@ -37,6 +37,9 @@ $applicationList = @(
   "Microsoft.OneConnect"
   "Microsoft.Office.OneNote"
   "Microsoft.People"
+  "Microsoft.Microsoft3DViewer"
+  "Microsoft.MixedReality.Portal*"
+  "*Skype*"
   "Microsoft.WindowsPhone"
   "Microsoft.WindowsSoundRecorder"
   "*Solitaire*"
@@ -44,6 +47,8 @@ $applicationList = @(
   "Microsoft.Office.Sway"
   "Microsoft.XboxApp"
   "Microsoft.XboxIdentityProvider"
+  "Microsoft.XboxGameOverlay"
+  "Microsoft.XboxGamingOverlay"
   "Microsoft.ZuneMusic"
   "Microsoft.ZuneVideo"
   "Microsoft.NetworkSpeedTest"
@@ -57,6 +62,7 @@ $applicationList = @(
   "G5*"
   "*Dell*"
   "*Facebook*"
+  "*Instagram*"
   "*Keeper*"
   "*Netflix*"
   "*Twitter*"

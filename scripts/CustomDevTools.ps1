@@ -3,18 +3,19 @@
 ## (might evoke errors on some packages later on)
 
 # system and cli
-choco install -y curl                        --limit-output
+choco install -y curl                            --limit-output
             
 # browsers             
-choco install -y GoogleChrome                --limit-output
-choco install -y Firefox                     --limit-output
-choco install -y microsoft-edge              --limit-output
+choco install -y GoogleChrome              --limit-output
+choco install -y Firefox                         --limit-output
 
 #fonts
-choco install sourcecodepro                  --limit-output
+choco install -y sourcecodepro               --limit-output
+choco install -y nerdfont-hack                --limit-output
+choco install -y firacode                        --limit-output
+
 
 # dev tools and frameworks
-choco install -y vscode                      --limit-output
 choco install -y microsoft-windows-terminal  --limit-output
 choco install -y dbeaver                     --limit-output
 
@@ -27,7 +28,7 @@ choco install -y ditto                       --limit-output
 
 # communication tools
 choco install -y slack                       --limit-output
-choco install -y discord                     --limit-output
-choco install -y gather                      --limit-output
+# choco install -y discord                     --limit-output
+# choco install -y gather                      --limit-output
 choco install -y notion                      --limit-output
 
