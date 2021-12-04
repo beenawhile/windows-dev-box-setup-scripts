@@ -22,12 +22,12 @@ function executeScript {
 }
 
 #--- Setting up Windows ---
-# executeScript "SystemConfiguration.ps1";
-# executeScript "FileExplorerSettings.ps1";
-# executeScript "RemoveDefaultApps.ps1";
-# executeScript "CommonDevTools.ps1";
-# executeScript "HyperV.ps1";
-# executeScript "WSL.ps1";
+executeScript "SystemConfiguration.ps1";
+executeScript "FileExplorerSettings.ps1";
+executeScript "RemoveDefaultApps.ps1";
+executeScript "CommonDevTools.ps1";
+executeScript "HyperV.ps1";
+executeScript "WSL.ps1";
 executeScript "Docker.ps1";
 executeScript "CustomDevTools.ps1";
 executeScript "WSLSetup.ps1";
