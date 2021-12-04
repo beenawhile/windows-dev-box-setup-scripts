@@ -3,11 +3,11 @@ choco install -y wsl2
 
 #--- Ubuntu ---
 # TODO: Move this to choco install once --root is included in that package
-choco install wsl-ubuntu-1804
+choco install wsl-ubuntu-2004 --params "/InstallRoot:true"
 # run the distro once and have it install locally. The default account is "ubuntu:ubuntu".
 
 RefreshEnv
-$distro = "ubuntu1804"
+$distro = "ubuntu2004"
 $username = "ubuntu"
 $password = "ubuntu"
 
@@ -41,7 +41,7 @@ if ($LASTEXITCODE -ne 0) { throw }
 if ($LASTEXITCODE -ne 0) { throw }
 & $distro run apt-get autoclean
 if ($LASTEXITCODE -ne 0) { throw }
-wsl --terminate "Ubuntu-18.04"  # instead of 'reboot'
+wsl --terminate "Ubuntu-20.04"  # instead of 'reboot'
 if ($LASTEXITCODE -ne 0) { throw }
 & $distro config --default-user "$username"
 if ($LASTEXITCODE -ne 0) { throw }
