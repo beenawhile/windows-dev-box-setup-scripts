@@ -2,7 +2,7 @@ choco install -y wsl2
 
 #--- Ubuntu ---
 # TODO: Move this to choco install once --root is included in that package
-choco install wsl-ubuntu-2004 --params "/InstallRoot:true"
+choco install -y wsl-ubuntu-2004 # --params "/InstallRoot:true"
 # run the distro once and have it install locally. The default account is "ubuntu:ubuntu".
 
 RefreshEnv
