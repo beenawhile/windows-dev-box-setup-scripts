@@ -10,14 +10,14 @@ $distro = "ubuntu2004"
 $username="ubuntu"
 $password="ubuntu"
 
-& $distro run useradd -m "$username"
-if ($LASTEXITCODE -ne 0) { throw }
-& $distro run "echo '${username}:${password}' | chpasswd"
-if ($LASTEXITCODE -ne 0) { throw }
-& $distro run chsh -s /bin/bash "$username"
-if ($LASTEXITCODE -ne 0) { throw }
-& $distro run usermod -aG adm,cdrom,sudo,dip,plugdev "$username"
-if ($LASTEXITCODE -ne 0) { throw }
+# & $distro run useradd -m "$username"
+# if ($LASTEXITCODE -ne 0) { throw }
+# & $distro run "echo '${username}:${password}' | chpasswd"
+# if ($LASTEXITCODE -ne 0) { throw }
+# & $distro run chsh -s /bin/bash "$username"
+# if ($LASTEXITCODE -ne 0) { throw }
+# & $distro run usermod -aG adm,cdrom,sudo,dip,plugdev "$username"
+# if ($LASTEXITCODE -ne 0) { throw }
 
 # apt install -y isn't enough to be truly noninteractive
 $env:DEBIAN_FRONTEND = "noninteractive"
