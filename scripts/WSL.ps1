@@ -7,6 +7,8 @@ choco install -y wsl-ubuntu-2004 --params "/InstallRoot:true"
 
 RefreshEnv
 $distro = "ubuntu2004"
+$username="ubuntu1"
+$password="ubuntu1"
 
 & $distro run useradd -m "$username"
 if ($LASTEXITCODE -ne 0) { throw }
