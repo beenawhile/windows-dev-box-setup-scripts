@@ -4,15 +4,16 @@
 
 # system and cli
 choco install -y curl                            --limit-output
+choco install -y adb                             --limit-output
             
 # browsers             
-choco install -y GoogleChrome              --limit-output
+choco install -y GoogleChrome                    --limit-output
 choco install -y Firefox                         --limit-output
 
 #fonts
-choco install -y sourcecodepro               --limit-output
+choco install -y sourcecodepro                --limit-output
 choco install -y nerdfont-hack                --limit-output
-choco install -y firacode                        --limit-output
+choco install -y firacode                     --limit-output
 
 
 # dev tools and frameworks
