@@ -1,6 +1,6 @@
 # packages
-sudo apt-get install -y build-essential curl git wget make unzip zip g++ libtool xz-utils libglu1-mesa default-jdk net-tools
-
+sudo apt-get install -y build-essential curl git wget make unzip  g++ libtool xz-utils  default-jdk net-tools  clang cmake pkg-config libgtk-3-dev
+        
 # download zsh
 sudo apt -y install zsh 
 sudo chsh -s $(which zsh)
