@@ -6,5 +6,5 @@ require("telescope_plugin")
 require("settings")
 require("flutter")
 require("cmp_snippets")
---require("keymappings")
-
+require("dashboard")
+require("bar")

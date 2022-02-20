@@ -20,7 +20,7 @@ vim.o.textwidth = 80
 vim.o.scrolloff = 15
 vim.wo.cursorline = true
 vim.wo.number = true
-vim.wo.relativenumber = true
+-- vim.wo.relativenumber = true
 
 vim.api.nvim_set_keymap('i', '<leader>/', ':Commentary<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<leader>/', ':Commentary<CR>', { noremap = true, silent = true })

@@ -1,19 +1,25 @@
+local map = vim.api.nvim_set_keymap
+local opts = { noremap = true, silent = true }
+
 local flutter_tools = require'flutter-tools'
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true;
 
+local dap = require'dap';
+
 flutter_tools.setup {
 	lsp = {
 		capabilities = capabilities,
-	}
+	},
+	debugger = { -- integrate with nvim dap + install dart code debugger
+    		enabled = true,
+    		run_via_dap = true, -- use dap instead of a plenary job to run flutter apps 
+  	},
 }
 
-vim.api.nvim_set_keymap('n', '<Leader>fr',':FlutterRun<CR>'
-, { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<Leader>fc',
-[[<Cmd>lua require('telescope').extensions.flutter.commands()<CR>]],
-{ noremap = true, silent = true })
+map('n', '<Leader>fr',':FlutterRun<CR>', opts)
+map('n', '<Leader>fc',[[<Cmd>lua require('telescope').extensions.flutter.commands()<CR>]], opts)
 
 -- snippet path
 vim.g.vsnip_snippet_dir = '~/.config/nvim/vsnip_snippets/';
@@ -43,8 +49,9 @@ saga.init_lsp_saga {
   },
 }
 
-vim.api.nvim_set_keymap('n', '<Leader>ca',':Lspsaga code_action<CR>',
-{ noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<Leader>fe',':Lspsaga diagnostic_jump_next<CR>',
-{ noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<F2>', ':Lspsaga rename<CR>', { noremap = true, silent = true })
+map('n', '<Leader>ca',':Lspsaga code_action<CR>', opts)
+map('x', '<Leader>ca',':Lspsaga code_action<CR>', opts)
+map('n', '<Leader>fe',':Lspsaga diagnostic_jump_next<CR>', opts)
+map('n', 'K',':Lspsaga hover_doc<CR>"', opts)
+map('n', '<leader>gd',[[<cmd>lua vim.lsp.buf.definition()<CR>]], opts)
+map('n', '<F2>', ':Lspsaga rename<CR>', opts)

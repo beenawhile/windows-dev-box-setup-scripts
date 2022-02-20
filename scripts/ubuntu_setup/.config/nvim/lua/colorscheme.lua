@@ -1,8 +1,8 @@
 local cmd = vim.cmd
+vim.opt.termguicolors = true
+vim.o.background = 'dark'
 cmd([[
-set termguicolors
 colorscheme dracula
-set background=dark
 let g:dracula_colorterm = 0
 let g:dracula_italic = 1
 "" some color scehemes do not have LSP diagnostics highlighting or are changed

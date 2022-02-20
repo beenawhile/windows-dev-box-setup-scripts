@@ -10,10 +10,7 @@ require "paq" {
 
     -- Color Scheme
     'Mofiqul/dracula.nvim';
-
-    -- CSS Color Preview
-    'ap/vim-css-color';
-
+    
     -- Status Bar
     'vim-airline/vim-airline';
     'vim-airline/vim-airline-themes';
@@ -28,6 +25,17 @@ require "paq" {
     -- File explorere with icons
     'kyazdani42/nvim-tree.lua';
     'kyazdani42/nvim-web-devicons';
+
+    -- Tab Bar
+    {'romgrk/barbar.nvim',
+  	requires = {{'kyazdani42/nvim-web-devicons'}}
+     };
+
+    -- Dashboard
+    'goolord/alpha-nvim';
+
+    -- Debugger
+    'mfussenegger/nvim-dap';
 
     -- Git
     'tpope/vim-fugitive';
