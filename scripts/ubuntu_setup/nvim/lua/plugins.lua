@@ -11,15 +11,11 @@ require "paq" {
     -- Color Scheme
     'Mofiqul/dracula.nvim';
     
-    -- Status Bar
-    'vim-airline/vim-airline';
-    'vim-airline/vim-airline-themes';
-
     -- Fuzzy finder
     "nvim-lua/popup.nvim";
     "nvim-lua/plenary.nvim";
     {'nvim-telescope/telescope.nvim',
-	requires = {{'nvim-lua/popup.nvim'},{'nvim-lua/pleanary.nvim'}}
+			requires = {{'nvim-lua/popup.nvim'},{'nvim-lua/pleanary.nvim'}}
     };
 
     -- File explorere with icons
@@ -27,9 +23,14 @@ require "paq" {
     'kyazdani42/nvim-web-devicons';
 
     -- Tab Bar
-    {'romgrk/barbar.nvim',
-  	requires = {{'kyazdani42/nvim-web-devicons'}}
-     };
+    -- {'romgrk/barbar.nvim',
+  	-- requires = {{'kyazdani42/nvim-web-devicons'}}
+    --  };
+
+    -- Status Bar
+    {'nvim-lualine/lualine.nvim',
+  	requires = {{ 'kyazdani42/nvim-web-devicons', opt = true }}
+    };
 
     -- Dashboard
     'goolord/alpha-nvim';

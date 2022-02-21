@@ -16,12 +16,16 @@ cmd 'filetype plugin indent on'
 -- utils.opt('o','splitright',true)
 -- utils.opt('o','wildmode','list:longest')
 -- utils.opt('o','textwidth',80)
+vim.o.tabstop = 2
+vim.o.sw = 2
+vim.o.sts = 2
 vim.o.textwidth = 80
 vim.o.scrolloff = 15
 vim.wo.cursorline = true
 vim.wo.number = true
--- vim.wo.relativenumber = true
+vim.wo.relativenumber = true
 
-vim.api.nvim_set_keymap('i', '<leader>/', ':Commentary<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<leader>/', ':Commentary<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('v', '<leader>/', ':Commentary<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('i', 'jk', '<Esc>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('i', 'kj', '<Esc>', { noremap = true, silent = true })
